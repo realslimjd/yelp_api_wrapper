@@ -1,5 +1,5 @@
 ## Instructions
-Notes: Tested on macOS 10.13 with Python 3.7. Should be compatible with Linux and Python >= 3.0
+Notes: Tested on macOS 10.13 with Python 3.7. Should be compatible with Linux and Python >= 3.4
 
 ### Prerequisites
 * [Python 3](http://docs.python-guide.org/en/latest/)
