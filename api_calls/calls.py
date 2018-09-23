@@ -69,6 +69,10 @@ def get_businesses(latitude, longitude, radius, categories):
     '''
     Returns a list
     List contains dicts of business objects on success
+    where each business object contains a:
+        name -- human readable business name
+        id -- yelp uuid for business
+        location {lat, long} -- dict of latitude and longitude of business
     List contains error message on error
     '''
     businesses = []
@@ -79,8 +83,6 @@ def get_businesses(latitude, longitude, radius, categories):
         'longitude' : longitude,
         'radius' : radius_meters,
         'categories' :  categories}
-
-    print(params)
 
     try:
         r = requests.get(base_url, headers=headers, params=params)
@@ -126,6 +128,7 @@ def get_business_details(business_id):
     '''
     Returns a list
     List contains a dict all business details from Yelp on success
+    which as it turns out, is a lot of stuff
     List contains error message on error
     '''
     details = []
