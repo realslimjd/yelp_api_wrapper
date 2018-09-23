@@ -3,7 +3,6 @@ This file contains all the routing information for the API.
 There's also a little error handling as well.
 Calls to the Yelp API are handlded in calls.py
 '''
-import logging
 from api_calls import calls as y_api
 from flask import Flask, jsonify, abort, make_response, request
 
@@ -63,4 +62,4 @@ def publish_business_details(business_id):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
